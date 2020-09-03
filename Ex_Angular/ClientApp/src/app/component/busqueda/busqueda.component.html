@@ -1,0 +1,24 @@
+<form [formGroup]="formularioBusqueda" class="form-inline my-2 my-lg-0 ml-auto" id="formGetUsuario" (submit)="onSubmit(formularioBusqueda.value)">
+    <label for="id"></label>
+    <input class="form-control mr-sm-2" formControlName="id" type="search" placeholder="Id" aria-label="Search" id="IdUsuario">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Búsqueda</button>
+</form>
+<br>
+<table *ngIf="tablaVisible" id="tableListado2" class='table'>
+    <thead>
+        <tr>
+            <th data-field="ID">ID</th>
+            <th data-field="Nombre">Nombre</th>
+            <th data-field="Apellido">Apellido</th>
+            <th data-field="Cargo">Cargo</th>
+            <th data-field="Sueldo">Sueldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td>{{empleadoData.id}}</td>
+        <td>{{empleadoData.nombre}}</td>
+        <td>{{empleadoData.apellido}}</td>
+        <td>{{empleadoData.cargo}}</td>
+        <td>{{empleadoData.sueldo}}</td>
+    </tbody>
+</table>

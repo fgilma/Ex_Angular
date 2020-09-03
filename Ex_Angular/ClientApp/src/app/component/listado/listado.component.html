@@ -1,0 +1,25 @@
+<div class="container">
+
+    <table id="tableListado" class='table'>
+        <thead>
+            <tr>
+                <th data-field="ID">ID</th>
+                <th data-field="Nombre">Nombre</th>
+                <th data-field="Apellido">Apellido</th>
+                <th data-field="Cargo">Cargo</th>
+                <th data-field="Sueldo">Sueldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--<tr *ngFor="let item of empleadoData">-->
+            <!--uso de prueba pipe async-->
+            <tr *ngFor="let item of observableData|async">
+                <td>{{item.id}}</td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+                <td>{{item.cargo}}</td>
+                <td>{{item.sueldo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
